@@ -2,4 +2,4 @@
 *.tfstate
 *.tfstate.backup
 *.swp
-aws-keys
+keys
