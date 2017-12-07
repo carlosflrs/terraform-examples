@@ -1,17 +1,31 @@
+# Provider
+
 provider "aws" {
     region = "us-east-1"
 }
+
+
+# Variables
 
 variable "server_port" {
     description = "The port the server will use for HTTP requests"
     default = 8080
 }
 
+
+# Outputs
+
 output "elb_dns_name" {
     value = "${aws_elb.example.dns_name}"
 }
 
+
+# Data
+
 data "aws_availability_zones" "all" {}
+
+
+# Resources
 
 resource "aws_security_group" "instance" {
     name = "terraform-example-instance"
